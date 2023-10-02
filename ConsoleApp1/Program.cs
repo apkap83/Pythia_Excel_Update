@@ -551,9 +551,9 @@ namespace ConsoleApp1
                 sqlString = "select VLRADD, COUNT(*) as COL1 from App_DS_XX_CSPS WHERE STYPE = 7 " + "AND" + ActiveSQLPred + "AND" + " VLRADD IS NOT NULL GROUP BY VLRADD" + ";";
                 xl.addMultipleDataToExcel(5, "E", 3, sql.Exec_MultiLine_Query(conn, sqlString));
 
-                sqlString = "select VLRADD as COL1, COUNT(*) from App_DS_XX_CSPS WHERE STYPE = 7 " + "AND" + ActiveSQLPred + "AND" + " STYPE = 20 AND IMSI like '2021009%' AND VLRADD IS NOT NULL GROUP BY VLRADD" + ";";
+                sqlString = "select VLRADD as COL1, COUNT(*) from App_DS_XX_CSPS WHERE" + ActiveSQLPred + "AND" + " STYPE = 20 AND IMSI like '2021009%' AND VLRADD IS NOT NULL GROUP BY VLRADD" + ";";
                 xl.addMultipleDataToExcel(5, "G", 3, sql.Exec_MultiLine_Query(conn, sqlString));
-                sqlString = "select VLRADD, COUNT(*) as COL1 from App_DS_XX_CSPS WHERE STYPE = 7 " + "AND" + ActiveSQLPred + "AND" + " STYPE = 20 AND IMSI like '2021009%' AND VLRADD IS NOT NULL GROUP BY VLRADD" + ";";
+                sqlString = "select VLRADD, COUNT(*) as COL1 from App_DS_XX_CSPS WHERE" + ActiveSQLPred + "AND" + " STYPE = 20 AND IMSI like '2021009%' AND VLRADD IS NOT NULL GROUP BY VLRADD" + ";";
                 xl.addMultipleDataToExcel(5, "H", 3, sql.Exec_MultiLine_Query(conn, sqlString));
 
 
