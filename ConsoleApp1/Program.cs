@@ -109,7 +109,7 @@ namespace ConsoleApp1
             String weekOfDayFromDbName = dbName.Replace("CUDB_", "");
 
             MyExcel xl = new MyExcel(xlsxFilePath);
-            Connect_To_Mysql sql = new Connect_To_Mysql("server=172.16.142.124;uid=pythia_ro;pwd=9esa8E2r9tWPhPB5M2mn;database=" + dbName + ";ConnectionTimeout=120;Port=3306;AllowUserVariables=true;DefaultCommandTimeout=120");
+            Connect_To_Mysql sql = new Connect_To_Mysql("server=172.16.142.124;uid=pythia_ro;pwd=9esa8E2r9tWPhPB5M2mn;database=" + dbName + ";ConnectionTimeout=1200;Port=3306;AllowUserVariables=true;DefaultCommandTimeout=9200");
             MySqlConnection conn = sql.Connect_ToSQL();
 
             string ActiveSQLPred = " CSLOC <> 2 AND CSLOC <> 5 ";
